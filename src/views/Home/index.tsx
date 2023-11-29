@@ -16,8 +16,39 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="flex flex-col gap-3 pt-3 lg:flex-row">
-                    <Button variant="primary"></Button>
-                    <Button variant="mono"></Button>
+                    <Button variant="primary">Sign up</Button>
+                    <Button variant="mono">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                        >
+                            <g clip-path="url(#clip0_2315_1085)">
+                                <path
+                                    d="M9.99996 18.3332C14.6023 18.3332 18.3333 14.6022 18.3333 9.99984C18.3333 5.39746 14.6023 1.6665 9.99996 1.6665C5.39759 1.6665 1.66663 5.39746 1.66663 9.99984C1.66663 14.6022 5.39759 18.3332 9.99996 18.3332Z"
+                                    stroke="#344054"
+                                    strokeWidth="1.67"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M8.33329 6.6665L13.3333 9.99984L8.33329 13.3332V6.6665Z"
+                                    stroke="#344054"
+                                    strokeWidth="1.67"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2315_1085">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Demo
+                    </Button>
                 </div>
                 <div className="px-4 py-16">
                     <img src="/macbook-small.png" alt="..."></img>
@@ -72,15 +103,39 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row flex-wrap gap-y-10">
                     {/* features grid */}
-                    <FeatureBlock imgUrl="/featured-icons/icon1.png" title="Share team inboxes" body="Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop." />
-                    <FeatureBlock imgUrl="/featured-icons/icon2.png" title="Deliver instant answers" body="An all-in-one customer service platform that helps you balance everything your customers need to be happy." />
-                    <FeatureBlock imgUrl="/featured-icons/icon3.png" title="Manage your team with reports" body="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks." />
-                    <FeatureBlock imgUrl="/featured-icons/icon4.png" title="Connect with customers" body="Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion." />
-                    <FeatureBlock imgUrl="/featured-icons/icon5.png" title="Connect the tools you already use" body="Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools." />
-                    <FeatureBlock imgUrl="/featured-icons/icon6.png" title="Our people make the difference" body="We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help." />
+                    <FeatureBlock
+                        imgUrl="/featured-icons/icon1.png"
+                        title="Share team inboxes"
+                        body="Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop."
+                    />
+                    <FeatureBlock
+                        imgUrl="/featured-icons/icon2.png"
+                        title="Deliver instant answers"
+                        body="An all-in-one customer service platform that helps you balance everything your customers need to be happy."
+                    />
+                    <FeatureBlock
+                        imgUrl="/featured-icons/icon3.png"
+                        title="Manage your team with reports"
+                        body="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
+                    />
+                    <FeatureBlock
+                        imgUrl="/featured-icons/icon4.png"
+                        title="Connect with customers"
+                        body="Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion."
+                    />
+                    <FeatureBlock
+                        imgUrl="/featured-icons/icon5.png"
+                        title="Connect the tools you already use"
+                        body="Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools."
+                    />
+                    <FeatureBlock
+                        imgUrl="/featured-icons/icon6.png"
+                        title="Our people make the difference"
+                        body="We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help."
+                    />
                 </div>
             </section>
-            <section className="flex flex-col items-center gap-8 px-4 py-16 bg-gray-50">
+            <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16">
                 <div className="flex gap-[10px]">
                     <img src="/company-icons/sisyphus.svg" alt="..." />
                     <span className="text-2xl font-semibold text-gray-900">

@@ -1,10 +1,15 @@
 import Button from '../../components/Common/Button'
+import { cn } from '../../lib/utils'
 
 export default function Home() {
     return (
         <>
             <section className="px-4 py-16">
-                <ButtonBadgeCTA />
+                <ButtonBadge
+                    innerBadgeText="New feature"
+                    mainBadgeText="Check out the team dashboard"
+                    isIconIncluded
+                />
                 <div className="flex flex-col gap-4 py-4">
                     <h1 className="line text-center text-4xl font-semibold leading-[44px] -tracking-[0.72px] text-gray-900">
                         Beautiful analytics to grow smarter
@@ -136,6 +141,7 @@ export default function Home() {
                 </div>
             </section>
             <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16">
+                {/* testi section */}
                 <div className="flex gap-[10px]">
                     <img src="/company-icons/sisyphus.svg" alt="..." />
                     <span className="text-2xl font-semibold text-gray-900">
@@ -164,6 +170,24 @@ export default function Home() {
                         {/* !TODO: check this later if correct semantic */}
                     </figcaption>
                 </figure>
+            </section>
+            <section className="px-4 py-16">
+                <ButtonBadge
+                    mainBadgeText="Features"
+                    className="mb-4 text-sm"
+                />
+                <p className="text-center text-3xl font-semibold leading-[38px] text-gray-900 mb-4">
+                    Cutting-edge features for advanced analytics
+                </p>
+                <p className="text-center text-lg font-normal text-gray-500 mb-12">
+                    Powerful, self-serve product and growth analytics to help
+                    you convert, engage, and retain more users. Trusted by over
+                    4,000 startups.
+                </p>
+                <div className='max-h-[360px] relative overflow-hidden'>
+                    <img src="/iphone.png" alt="..."  className='mx-auto shadow-3xl' width={244} height={497}/>
+                    {/* huge images container */}
+                </div>
             </section>
         </>
     )
@@ -200,28 +224,48 @@ function CompanyLogo({ name, imgUrl }: { name: string; imgUrl: string }) {
     )
 }
 
-function ButtonBadgeCTA() {
+function ButtonBadge({
+    innerBadgeText,
+    mainBadgeText,
+    className,
+    isIconIncluded = false,
+}: {
+    innerBadgeText?: string
+    mainBadgeText: string
+    isIconIncluded?: boolean
+    className?: string
+}) {
+    const defaultClasses =
+        'mx-auto flex h-[22px] items-center rounded-2xl bg-primary-50 p-4 pr-[10px] text-xs font-medium text-primary-700'
+
+    const mainClasses = cn(defaultClasses, className)
+
     return (
-        <button className="mx-auto flex h-[22px] items-center rounded-2xl bg-primary-50 p-4 pr-[10px] text-xs font-medium text-primary-700">
-            <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] lg:mr-3">
-                New feature
-            </span>
-            <span className="mr-1">Check out the team dashboard</span>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-            >
-                <path
-                    d="M3.33337 8.00016H12.6667M12.6667 8.00016L8.00004 3.3335M12.6667 8.00016L8.00004 12.6668"
-                    stroke="#9E77ED"
-                    strokeWidth="1.3333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-            </svg>
+        <button className={mainClasses}>
+            {innerBadgeText && (
+                <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] lg:mr-3">
+                    {innerBadgeText}
+                </span>
+            )}
+            <span className="">{mainBadgeText}</span>
+            {isIconIncluded && (
+                <svg
+                    className="ml-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                >
+                    <path
+                        d="M3.33337 8.00016H12.6667M12.6667 8.00016L8.00004 3.3335M12.6667 8.00016L8.00004 12.6668"
+                        stroke="#9E77ED"
+                        strokeWidth="1.3333"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                </svg>
+            )}
         </button>
     )
 }

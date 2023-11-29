@@ -9,7 +9,4 @@
   "include": [
     "vite.config.ts"
   ],
-  "exclude": [
-    "prettier.config.cjs"
-  ]
 }

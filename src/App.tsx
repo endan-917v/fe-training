@@ -4,7 +4,7 @@ import '@fontsource-variable/inter';
 
 function App() {
   return (
-    <div className="font-[Inter_Variable]">
+    <div className="font-['Inter_Variable']">
       <Header></Header>
       <Home></Home>
     </div>

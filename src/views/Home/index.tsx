@@ -54,7 +54,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <div className="border-t-primary-100 mx-4 border-t"></div>
+            <div className="mx-4 border-t border-t-gray-200"></div>
             <section className="px-4 py-16">
                 <div className=" pb-12">
                     {/* features header container */}
@@ -72,15 +72,15 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row flex-wrap gap-y-10">
                     {/* features grid */}
-                    <FeatureBlock></FeatureBlock>
-                    <FeatureBlock></FeatureBlock>
-                    <FeatureBlock></FeatureBlock>
-                    <FeatureBlock></FeatureBlock>
-                    <FeatureBlock></FeatureBlock>
-                    <FeatureBlock></FeatureBlock>
+                    <FeatureBlock imgUrl="/featured-icons/icon1.png" title="Share team inboxes" body="Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop." />
+                    <FeatureBlock imgUrl="/featured-icons/icon2.png" title="Deliver instant answers" body="An all-in-one customer service platform that helps you balance everything your customers need to be happy." />
+                    <FeatureBlock imgUrl="/featured-icons/icon3.png" title="Manage your team with reports" body="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks." />
+                    <FeatureBlock imgUrl="/featured-icons/icon4.png" title="Connect with customers" body="Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion." />
+                    <FeatureBlock imgUrl="/featured-icons/icon5.png" title="Connect the tools you already use" body="Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools." />
+                    <FeatureBlock imgUrl="/featured-icons/icon6.png" title="Our people make the difference" body="We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help." />
                 </div>
             </section>
-            <section className="flex flex-col items-center gap-8 px-4 py-16">
+            <section className="flex flex-col items-center gap-8 px-4 py-16 bg-gray-50">
                 <div className="flex gap-[10px]">
                     <img src="/company-icons/sisyphus.svg" alt="..." />
                     <span className="text-2xl font-semibold text-gray-900">
@@ -96,12 +96,16 @@ export default function Home() {
                         <img
                             src="/candice-wu-avatar.png"
                             alt="..."
-                            className="mb-4 mx-auto"
+                            className="mx-auto mb-4"
                             width={64}
                             height={64}
                         />
-                        <div className='mb-1 text-gray-900 text-lg font-medium text-center'>Candice Wu</div>
-                        <div className='text-gray-500 text-base  text-center'>Product Manager, Sisyphus</div>
+                        <div className="mb-1 text-center text-lg font-medium text-gray-900">
+                            Candice Wu
+                        </div>
+                        <div className="text-center text-base  text-gray-500">
+                            Product Manager, Sisyphus
+                        </div>
                         {/* !TODO: check this later if correct semantic */}
                     </figcaption>
                 </figure>
@@ -110,18 +114,23 @@ export default function Home() {
     )
 }
 
-function FeatureBlock() {
+function FeatureBlock({
+    imgUrl,
+    title,
+    body,
+}: {
+    imgUrl: string
+    title: string
+    body: string
+}) {
     return (
         <div className="flex flex-col items-center gap-4">
-            <img src="" className="mb-4" alt="..."></img>
+            <img src={imgUrl} className="mb-4" alt="..."></img>
             <div className="flex flex-col gap-1">
                 <p className="text-center text-lg font-medium text-gray-900">
-                    Share team inboxes
+                    {title}
                 </p>
-                <p className="text-center text-base text-gray-500">
-                    Whether you have a team of 2 or 200, our shared team inboxes
-                    keep everyone on the same page and in the loop.
-                </p>
+                <p className="text-center text-base text-gray-500">{body}</p>
             </div>
         </div>
     )

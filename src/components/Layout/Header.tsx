@@ -3,7 +3,7 @@ export default function Header() {
     <header className="flex h-[72px] px-4 py-5 lg:h-20 justify-between items-center">
       <div className="flex h-8 items-center justify-center gap-[10px]">
         <img src="/logo.png" alt="Purple lens with blurred half"></img>
-        <span className="text-xl font-semibold">Untitled UI</span>
+        <span className="text-xl font-medium">Untitled UI</span>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"

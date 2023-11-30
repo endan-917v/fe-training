@@ -223,7 +223,7 @@ export default function Home() {
           Everything you need to know about the product and billing.
         </p>
         <div className="mb-12">Accordion</div>
-        <div className="flex flex-col items-center justify-center gap-6 px-5 py-8">
+        <div className="flex flex-col items-center justify-center gap-6 px-5 py-8 bg-gray-50 rounded-2xl">
           <div className="relative flex items-baseline">
             <img
               src="/faq-avatars/Avatar.png"

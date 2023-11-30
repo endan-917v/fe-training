@@ -229,13 +229,13 @@ export default function Home() {
         <p className="mb-12 text-center text-lg font-normal text-gray-500">
           Everything you need to know about the product and billing.
         </p>
-        <div className="mb-12">
+        <div className="mb-12 lg:max-w-3xl lg:mx-auto">
           <Accordion type="single" collapsible>
             <AccordionItem className="py-6" value="item-1">
               <AccordionTrigger className="text-lg text-gray-900">
                 Is there a free trial available?
               </AccordionTrigger>
-              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500 lg:max-w-[720px]">
                 Yes, you can try us for free for 30 days. If you want,
                 we&rsquo;ll provide you with a free, personalized 30-minute
                 onboarding call to get you up and running as soon as possible.
@@ -246,7 +246,7 @@ export default function Home() {
               <AccordionTrigger className="text-lg text-gray-900">
                 Can I change my plan later?
               </AccordionTrigger>
-              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500 lg:max-w-[720px]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
                 repudiandae totam culpa iure, corporis iste quidem doloribus qui
                 nihil, eaque, quasi molestias harum sed rem amet modi. Corrupti,
@@ -258,7 +258,7 @@ export default function Home() {
               <AccordionTrigger className="text-lg text-gray-900">
                 Can other info be added to an invoice?
               </AccordionTrigger>
-              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500 lg:max-w-[720px]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
                 itaque asperiores dolorum sequi delectus nisi fuga eveniet.
                 Neque illum eos nemo voluptatibus. Quam, perspiciatis corrupti
@@ -270,7 +270,7 @@ export default function Home() {
               <AccordionTrigger className="text-lg text-gray-900">
                 How does billing work?
               </AccordionTrigger>
-              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500 lg:max-w-[720px]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
                 maiores saepe magnam fugiat nostrum quia iste porro fugit
                 quisquam? Nam quos distinctio cum quae vitae. Molestias
@@ -282,7 +282,7 @@ export default function Home() {
               <AccordionTrigger className="text-lg text-gray-900">
                 How do I change my account email?
               </AccordionTrigger>
-              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500 lg:max-w-[720px]">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
                 excepturi harum nostrum explicabo sunt molestias vel. Maiores
                 debitis vel eligendi exercitationem alias modi, ullam reiciendis
@@ -291,7 +291,7 @@ export default function Home() {
             </AccordionItem>
           </Accordion>
         </div>
-        <div className="flex flex-col items-center justify-center gap-6 rounded-2xl bg-gray-50 px-5 py-8">
+        <div className="flex flex-col items-center justify-center gap-6 rounded-2xl bg-gray-50 px-5 py-8 lg:mx-16">
           <div className="relative flex items-baseline">
             <img
               src="/faq-avatars/Avatar.png"
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
       <section className="px-4 py-16 lg:px-16">
-        <div className="mb-12 lg:mb-16 lg:px-8 lg:max-w-3xl">
+        <div className="mb-12 lg:mb-16 lg:max-w-3xl lg:px-8">
           <p className="mb-3 text-sm font-semibold text-primary-700">
             Launch faster
           </p>

@@ -98,8 +98,8 @@ export default function Home() {
         </div>
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
-      <section className="px-4 py-16">
-        <div className=" pb-12">
+      <section className="px-4 py-16 lg:py-24">
+        <div className=" pb-12 lg:pb-16 lg:max-w-3xl lg:mx-auto lg:px-8">
           {/* features header container */}
           <p className="mb-3 text-center text-sm font-semibold text-primary-700">
             Features
@@ -113,7 +113,7 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <ul className="flex flex-row flex-wrap gap-y-10">
+        <ul className="flex flex-row flex-wrap gap-y-10 lg:justify-center lg:gap-8">
           {/* features grid */}
           <FeatureListItem
             imgUrl="/featured-icons/icon1.png"
@@ -422,10 +422,10 @@ function FeatureListItem({
     <li className="flex flex-col items-center gap-4 lg:max-w-sm">
       <img src={imgUrl} className="" alt="..."></img>
       <div className="flex flex-col gap-1">
-        <h3 className="text-center text-lg font-medium text-gray-900">
+        <h3 className="text-center text-lg font-medium text-gray-900 leading-[38px] lg:leading-[30px]">
           {title}
         </h3>
-        <p className="text-center text-base text-gray-500">{body}</p>
+        <p className="text-center text-base text-gray-500 leading-6">{body}</p>
         {learnMoreUrl && (
           <a
             href={learnMoreUrl}

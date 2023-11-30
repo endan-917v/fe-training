@@ -231,14 +231,62 @@ export default function Home() {
         </p>
         <div className="mb-12">
           <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
+            <AccordionItem className="py-6" value="item-1">
               <AccordionTrigger className="text-lg text-gray-900">
                 Is there a free trial available?
               </AccordionTrigger>
-              <AccordionContent className="text-base leading-6 text-gray-500 max-w-[311px]">
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
                 Yes, you can try us for free for 30 days. If you want,
                 we&rsquo;ll provide you with a free, personalized 30-minute
                 onboarding call to get you up and running as soon as possible.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem className="py-6" value="item-2">
+              <AccordionTrigger className="text-lg text-gray-900">
+                Can I change my plan later?
+              </AccordionTrigger>
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                repudiandae totam culpa iure, corporis iste quidem doloribus qui
+                nihil, eaque, quasi molestias harum sed rem amet modi. Corrupti,
+                quos sequi.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem className="py-6" value="item-3">
+              <AccordionTrigger className="text-lg text-gray-900">
+                Can other info be added to an invoice?
+              </AccordionTrigger>
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+                itaque asperiores dolorum sequi delectus nisi fuga eveniet.
+                Neque illum eos nemo voluptatibus. Quam, perspiciatis corrupti
+                ipsum mollitia alias est nemo!
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem className="py-6" value="item-4">
+              <AccordionTrigger className="text-lg text-gray-900">
+                How does billing work?
+              </AccordionTrigger>
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                maiores saepe magnam fugiat nostrum quia iste porro fugit
+                quisquam? Nam quos distinctio cum quae vitae. Molestias
+                perspiciatis mollitia dolor. Dolore.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem className="py-6" value="item-5">
+              <AccordionTrigger className="text-lg text-gray-900">
+                How do I change my account email?
+              </AccordionTrigger>
+              <AccordionContent className="max-w-[311px] text-base leading-6 text-gray-500">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+                excepturi harum nostrum explicabo sunt molestias vel. Maiores
+                debitis vel eligendi exercitationem alias modi, ullam reiciendis
+                iure pariatur ipsa, sit illo.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

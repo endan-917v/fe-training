@@ -27,7 +27,7 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <div className="flex flex-col gap-3 pt-3 xl:flex-row">
+        <div className="flex flex-col gap-3 pt-3 lg:flex-row">
           <Button variant="primary">Sign up</Button>
           <Button variant="mono">
             <svg
@@ -37,7 +37,7 @@ export default function Home() {
               viewBox="0 0 20 20"
               fill="none"
             >
-              <g clip-path="url(#clip0_2315_1085)">
+              <g clipPath="url(#clip0_2315_1085)">
                 <path
                   d="M9.99996 18.3332C14.6023 18.3332 18.3333 14.6022 18.3333 9.99984C18.3333 5.39746 14.6023 1.6665 9.99996 1.6665C5.39759 1.6665 1.66663 5.39746 1.66663 9.99984C1.66663 14.6022 5.39759 18.3332 9.99996 18.3332Z"
                   stroke="#344054"
@@ -324,19 +324,21 @@ export default function Home() {
         </div>
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
-      <section className="px-4 py-16">
-        <p className="mb-3 text-sm font-semibold text-primary-700">
-          Launch faster
-        </p>
-        <h2 className="mb-4 text-3xl font-semibold leading-[38px] text-gray-900">
-          Build something great
-        </h2>
-        <p className="mb-12 text-lg font-normal text-gray-500">
-          We&rsquo;ve done all the heavy lifting so you don&rsquo;t have to —
-          get all the data you need to launch and grow your business faster.
-        </p>
-        <div className="flex flex-col gap-12 xl:flex-row xl:gap-24 xl:px-4">
-          <ul className="grid grid-cols-1 gap-8 xl:grid-cols-2">
+      <section className="px-4 py-16 lg:px-16">
+        <div className="mb-12 lg:mb-16 lg:px-8 lg:max-w-3xl">
+          <p className="mb-3 text-sm font-semibold text-primary-700">
+            Launch faster
+          </p>
+          <h2 className="mb-4 text-3xl font-semibold leading-[38px] text-gray-900">
+            Build something great
+          </h2>
+          <p className="text-lg font-normal text-gray-500 ">
+            We&rsquo;ve done all the heavy lifting so you don&rsquo;t have to —
+            get all the data you need to launch and grow your business faster.
+          </p>
+        </div>
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24 lg:px-8">
+          <ul className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-16">
             <MetricItem
               metricText="4,000+"
               metricHeading="Global customers"
@@ -363,14 +365,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 px-4 py-16">
+      <section className="bg-gray-50 px-4 py-16 lg:py-24">
         <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
           Start your free trial
         </h2>
         <p className="mb-12 text-center text-lg font-normal text-gray-500">
           Join over 4,000+ startups already growing with Untitled.
         </p>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 lg:flex-row-reverse lg:justify-center">
           <Button>Get started</Button>
           <Button variant="mono">Learn more</Button>
         </div>
@@ -389,8 +391,8 @@ function MetricItem({
   metricText: string;
 }) {
   return (
-    <li>
-      <p className="text-center text-5xl font-semibold leading-[60px] -tracking-[0.96px] text-primary-600 xl:text-6xl xl:leading-[72px]">
+    <li className="lg:max-w-[264px]">
+      <p className="text-center text-5xl font-semibold leading-[60px] -tracking-[0.96px] text-primary-600 lg:text-6xl lg:leading-[72px]">
         {metricText}
       </p>
       <p className="text-center text-lg font-medium leading-7 text-gray-900">
@@ -462,7 +464,7 @@ function ButtonBadge({
   return (
     <button className={mainClasses}>
       {innerBadgeText && (
-        <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] xl:mr-3">
+        <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] lg:mr-3">
           {innerBadgeText}
         </span>
       )}

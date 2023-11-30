@@ -94,9 +94,9 @@ export default function Home() {
       <section className="px-4 py-16">
         <div className=" pb-12">
           {/* features header container */}
-          <h2 className="mb-3 text-center text-sm font-semibold text-primary-700">
+          <p className="mb-3 text-center text-sm font-semibold text-primary-700">
             Features
-          </h2>
+          </p>
           <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
             Analytics that feels like it&rsquo;s from the future
           </h2>
@@ -121,7 +121,7 @@ export default function Home() {
           <FeatureListItem
             imgUrl="/featured-icons/icon3.png"
             title="Manage your team with reports"
-            body="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
+            body="Measure what matters with Untitled&rsquo;s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
           />
           <FeatureListItem
             imgUrl="/featured-icons/icon4.png"
@@ -136,12 +136,12 @@ export default function Home() {
           <FeatureListItem
             imgUrl="/featured-icons/icon6.png"
             title="Our people make the difference"
-            body="We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help."
+            body="We&rsquo;re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help."
           />
         </ul>
       </section>
       <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16">
-        {/* testi section */}
+        {/* testimonial section */}
         <div className="flex gap-[10px]">
           <img src="/company-icons/sisyphus.svg" alt="..." />
           <span className="text-2xl font-semibold text-gray-900">Sisyphus</span>
@@ -215,6 +215,7 @@ export default function Home() {
         </ul>
       </section>
       <section className="px-4 py-16">
+        {/* faq section */}
         <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
           Frequently Asked Questions
         </h2>
@@ -224,22 +225,59 @@ export default function Home() {
         <div className="mb-12">Accordion</div>
         <div className="flex flex-col items-center justify-center gap-6 px-5 py-8">
           <div className="relative flex items-baseline">
-            <img src="/faq-avatars/Avatar.png" className="w-12 h-12 transform translate-x-4" alt="..."></img>
-            <img src="/faq-avatars/Avatar-2.png" className="w-14 h-14 z-20" alt="..."></img>
-            <img src="/faq-avatars/Avatar-1.png" className="w-12 h-12 transform -translate-x-4" alt="..."></img>
+            <img
+              src="/faq-avatars/Avatar.png"
+              className="h-12 w-12 translate-x-4 transform"
+              alt="..."
+            ></img>
+            <img
+              src="/faq-avatars/Avatar-2.png"
+              className="z-20 h-14 w-14"
+              alt="..."
+            ></img>
+            <img
+              src="/faq-avatars/Avatar-1.png"
+              className="h-12 w-12 -translate-x-4 transform"
+              alt="..."
+            ></img>
           </div>
           <div className="flex flex-col gap-2">
             <p className="text-center text-xl font-medium leading-[30px] text-gray-900">
               Still have questions?
             </p>
             <p className=" text-center text-gray-500">
-              Can’t find the answer you’re looking for? Please chat to our
-              friendly team.
+              Can&rsquo;t find the answer you&rsquo;re looking for? Please chat
+              to our friendly team.
             </p>
           </div>
           <Button variant="primary" className="w-[130px]">
             Get in touch
           </Button>
+        </div>
+      </section>
+      <div className="mx-4 border-t border-t-gray-200"></div>
+      <section className="px-4 py-16">
+        <p className="mb-3 text-sm font-semibold text-primary-700">
+          Launch faster
+        </p>
+        <h2 className="mb-4 text-3xl font-semibold leading-[38px] text-gray-900">
+          Build something great
+        </h2>
+        <p className="mb-12 text-lg font-normal text-gray-500">
+          We&rsquo;ve done all the heavy lifting so you don&rsquo;t have to —
+          get all the data you need to launch and grow your business faster.
+        </p>
+      </section>
+      <section className="bg-gray-50 px-4 py-16">
+        <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
+          Start your free trial
+        </h2>
+        <p className="mb-12 text-center text-lg font-normal text-gray-500">
+          Join over 4,000+ startups already growing with Untitled.
+        </p>
+        <div className="flex flex-col gap-3">
+          <Button>Get started</Button>
+          <Button variant="mono">Learn more</Button>
         </div>
       </section>
     </>

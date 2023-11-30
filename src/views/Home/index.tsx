@@ -147,14 +147,14 @@ export default function Home() {
           />
         </ul>
       </section>
-      <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16">
+      <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16 lg:py-24 lg:px-16">
         {/* testimonial section */}
         <div className="flex gap-[10px]">
           <img src="/company-icons/sisyphus.svg" alt="..." />
           <span className="text-2xl font-semibold text-gray-900">Sisyphus</span>
         </div>
         <figure className="flex flex-col gap-8">
-          <blockquote className="text-center text-3xl font-medium leading-[38px]">
+          <blockquote className="text-center text-3xl font-medium leading-[38px] lg:text-5xl lg:leading-[60px] lg:px-8">
             We&rsquo;ve been using Untitled to kick start every new project and
             can&rsquo;t imagine working without it.
           </blockquote>
@@ -176,16 +176,19 @@ export default function Home() {
           </figcaption>
         </figure>
       </section>
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 lg:px-24 lg:py-24">
         {/* features section */}
-        <ButtonBadge mainBadgeText="Features" className="mb-4 text-sm" />
-        <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
-          Cutting-edge features for advanced analytics
-        </h2>
-        <p className="mb-12 text-center text-lg font-normal text-gray-500">
-          Powerful, self-serve product and growth analytics to help you convert,
-          engage, and retain more users. Trusted by over 4,000 startups.
-        </p>
+        <div className="lg:mx-auto lg:max-w-3xl">
+          <ButtonBadge mainBadgeText="Features" className="mb-4 text-sm" />
+          <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
+            Cutting-edge features for advanced analytics
+          </h2>
+          <p className="mb-12 px-8 text-center text-lg font-normal text-gray-500">
+            Powerful, self-serve product and growth analytics to help you
+            convert, engage, and retain more users. Trusted by over 4,000
+            startups.
+          </p>
+        </div>
         <div className="relative mb-12 max-h-[360px] overflow-hidden">
           {/* huge images container */}
           <div className="relative">
@@ -200,7 +203,8 @@ export default function Home() {
             />
           </div>
         </div>
-        <ul className="flex flex-row flex-wrap gap-y-10">
+        <ul className="flex flex-row flex-wrap gap-y-10 lg:flex-nowrap lg:gap-8">
+          {/* cutting edge features grid */}
           <FeatureListItem
             imgUrl="/featured-icons/icon1.png"
             title="Share team inboxes"
@@ -229,7 +233,7 @@ export default function Home() {
         <p className="mb-12 text-center text-lg font-normal text-gray-500">
           Everything you need to know about the product and billing.
         </p>
-        <div className="mb-12 lg:max-w-3xl lg:mx-auto">
+        <div className="mb-12 lg:mx-auto lg:max-w-3xl">
           <Accordion type="single" collapsible>
             <AccordionItem className="py-6" value="item-1">
               <AccordionTrigger className="text-lg text-gray-900">
@@ -415,7 +419,7 @@ function FeatureListItem({
   learnMoreUrl?: string;
 }) {
   return (
-    <li className="flex flex-col items-center gap-4">
+    <li className="flex flex-col items-center gap-4 lg:max-w-sm">
       <img src={imgUrl} className="" alt="..."></img>
       <div className="flex flex-col gap-1">
         <h3 className="text-center text-lg font-medium text-gray-900">

@@ -97,9 +97,9 @@ export default function Home() {
           <h2 className="mb-3 text-center text-sm font-semibold text-primary-700">
             Features
           </h2>
-          <p className="mb-3 text-center text-3xl font-semibold leading-[38px] text-gray-900">
+          <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
             Analytics that feels like it&rsquo;s from the future
-          </p>
+          </h2>
           <p className="text-center text-lg font-normal leading-7 text-gray-500">
             Powerful, self-serve product and growth analytics to help you
             convert, engage, and retain more users. Trusted by over 4,000
@@ -172,9 +172,9 @@ export default function Home() {
       <section className="px-4 py-16">
         {/* features section */}
         <ButtonBadge mainBadgeText="Features" className="mb-4 text-sm" />
-        <p className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
+        <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
           Cutting-edge features for advanced analytics
-        </p>
+        </h2>
         <p className="mb-12 text-center text-lg font-normal text-gray-500">
           Powerful, self-serve product and growth analytics to help you convert,
           engage, and retain more users. Trusted by over 4,000 startups.
@@ -209,10 +209,38 @@ export default function Home() {
           <FeatureListItem
             imgUrl="/featured-icons/icon3.png"
             title="Manage your team with reports"
-            body="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
+            body="Measure what matters with Untitled&rsquo;s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
             learnMoreUrl="/"
           />
         </ul>
+      </section>
+      <section className="px-4 py-16">
+        <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
+          Frequently Asked Questions
+        </h2>
+        <p className="mb-12 text-center text-lg font-normal text-gray-500">
+          Everything you need to know about the product and billing.
+        </p>
+        <div className="mb-12">Accordion</div>
+        <div className="flex flex-col items-center justify-center gap-6 px-5 py-8">
+          <div className="relative flex items-baseline">
+            <img src="/faq-avatars/Avatar.png" className="w-12 h-12 transform translate-x-4" alt="..."></img>
+            <img src="/faq-avatars/Avatar-2.png" className="w-14 h-14 z-20" alt="..."></img>
+            <img src="/faq-avatars/Avatar-1.png" className="w-12 h-12 transform -translate-x-4" alt="..."></img>
+          </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-center text-xl font-medium leading-[30px] text-gray-900">
+              Still have questions?
+            </p>
+            <p className=" text-center text-gray-500">
+              Can’t find the answer you’re looking for? Please chat to our
+              friendly team.
+            </p>
+          </div>
+          <Button variant="primary" className="w-[130px]">
+            Get in touch
+          </Button>
+        </div>
       </section>
     </>
   );

@@ -192,7 +192,10 @@ function FooterActualLinks({ links }: { links: FooterLinksItem[] }) {
       {links.map((value, index: number) => {
         return (
           <li key={index}>
-            <a href={value.url} className="font-medium text-gray-500 hover:underline flex gap-2 hover:cursor-pointer">
+            <a
+              href={value.url}
+              className="flex gap-2 font-medium text-gray-500 hover:cursor-pointer hover:underline"
+            >
               {value.label}
               {value.isNew && (
                 <button className="bg-success-50 text-success-700 rounded-2xl px-2 py-[2px] text-xs font-medium">

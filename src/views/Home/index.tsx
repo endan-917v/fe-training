@@ -20,7 +20,7 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <div className="flex flex-col gap-3 pt-3 lg:flex-row">
+        <div className="flex flex-col gap-3 pt-3 xl:flex-row">
           <Button variant="primary">Sign up</Button>
           <Button variant="mono">
             <svg
@@ -267,6 +267,33 @@ export default function Home() {
           We&rsquo;ve done all the heavy lifting so you don&rsquo;t have to —
           get all the data you need to launch and grow your business faster.
         </p>
+        <div className="flex flex-col gap-12 xl:flex-row xl:gap-24 xl:px-4">
+          <ul className="grid xl:grid-cols-2 grid-cols-1 gap-8">
+            <MetricItem
+              metricText="4,000+"
+              metricHeading="Global customers"
+              metricBody="We&rsquo;ve helped over 4,000 amazing global companies."
+            ></MetricItem>
+            <MetricItem
+              metricText="600%"
+              metricHeading="Return on investment"
+              metricBody="Our customers have reported an average of ~600% ROI."
+            ></MetricItem>
+            <MetricItem
+              metricText="10k"
+              metricHeading="Global downloads"
+              metricBody="Our app has been downloaded over 10k times."
+            ></MetricItem>
+            <MetricItem
+              metricText="200+"
+              metricHeading="5-star reviews"
+              metricBody="We&rsquo;re proud of our 5-star rating with over 200 reviews."
+            ></MetricItem>
+          </ul>
+          <div>
+            <img src="/something-great.png" alt="..." />
+          </div>
+        </div>
       </section>
       <section className="bg-gray-50 px-4 py-16">
         <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
@@ -281,6 +308,26 @@ export default function Home() {
         </div>
       </section>
     </>
+  );
+}
+
+function MetricItem({
+  metricBody,
+  metricHeading,
+  metricText,
+}: {
+  metricBody: string;
+  metricHeading: string;
+  metricText: string;
+}) {
+  return (
+    <li>
+      <p className="text-5xl leading-[60px] -tracking-[0.96px] xl:text-6xl xl:leading-[72px] font-semibold text-center text-primary-600">
+        {metricText}
+      </p>
+      <p className="text-gray-900 font-medium text-lg leading-7 text-center">{metricHeading}</p>
+      <p className="text-gray-500 leading-6 text-center">{metricBody}</p>
+    </li>
   );
 }
 
@@ -345,7 +392,7 @@ function ButtonBadge({
   return (
     <button className={mainClasses}>
       {innerBadgeText && (
-        <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] lg:mr-3">
+        <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] xl:mr-3">
           {innerBadgeText}
         </span>
       )}

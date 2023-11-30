@@ -21,6 +21,20 @@ export default {
         "3xl":
           "10.87081px 10.87081px 21.74162px -1.35885px rgba(16, 24, 40, 0.08), 21.74162px 21.74162px 43.48325px -2.7177px rgba(16, 24, 40, 0.20)",
       },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],

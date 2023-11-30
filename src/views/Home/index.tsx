@@ -1,6 +1,13 @@
 import Button from "../../components/Common/Button";
 import { cn } from "../../lib/utils";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../components/Common/Accordion";
+
 export default function Home() {
   return (
     <>
@@ -222,8 +229,21 @@ export default function Home() {
         <p className="mb-12 text-center text-lg font-normal text-gray-500">
           Everything you need to know about the product and billing.
         </p>
-        <div className="mb-12">Accordion</div>
-        <div className="flex flex-col items-center justify-center gap-6 px-5 py-8 bg-gray-50 rounded-2xl">
+        <div className="mb-12">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-lg text-gray-900">
+                Is there a free trial available?
+              </AccordionTrigger>
+              <AccordionContent className="text-base leading-6 text-gray-500 max-w-[311px]">
+                Yes, you can try us for free for 30 days. If you want,
+                we&rsquo;ll provide you with a free, personalized 30-minute
+                onboarding call to get you up and running as soon as possible.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 rounded-2xl bg-gray-50 px-5 py-8">
           <div className="relative flex items-baseline">
             <img
               src="/faq-avatars/Avatar.png"
@@ -268,7 +288,7 @@ export default function Home() {
           get all the data you need to launch and grow your business faster.
         </p>
         <div className="flex flex-col gap-12 xl:flex-row xl:gap-24 xl:px-4">
-          <ul className="grid xl:grid-cols-2 grid-cols-1 gap-8">
+          <ul className="grid grid-cols-1 gap-8 xl:grid-cols-2">
             <MetricItem
               metricText="4,000+"
               metricHeading="Global customers"
@@ -322,11 +342,13 @@ function MetricItem({
 }) {
   return (
     <li>
-      <p className="text-5xl leading-[60px] -tracking-[0.96px] xl:text-6xl xl:leading-[72px] font-semibold text-center text-primary-600">
+      <p className="text-center text-5xl font-semibold leading-[60px] -tracking-[0.96px] text-primary-600 xl:text-6xl xl:leading-[72px]">
         {metricText}
       </p>
-      <p className="text-gray-900 font-medium text-lg leading-7 text-center">{metricHeading}</p>
-      <p className="text-gray-500 leading-6 text-center">{metricBody}</p>
+      <p className="text-center text-lg font-medium leading-7 text-gray-900">
+        {metricHeading}
+      </p>
+      <p className="text-center leading-6 text-gray-500">{metricBody}</p>
     </li>
   );
 }

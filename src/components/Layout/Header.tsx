@@ -45,40 +45,60 @@ export const HeaderNavMenu = () => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <a href="/">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
-              </NavigationMenuLink>
-            </a>
+            <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+              Home
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-            <NavigationMenuContent className="grid grid-rows-3 grid-cols-2 lg:w-96">
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Spark</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Inbox</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Insight</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Resolve</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Connect</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Integrate</NavigationMenuLink>
+            <NavigationMenuContent className="grid grid-cols-2 grid-rows-3 lg:w-96">
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Spark
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Inbox
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Insight
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Resolve
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Connect
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Integrate
+              </NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-            <NavigationMenuContent className="grid grid-rows-3 grid-cols-2 lg:w-96">
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Blog</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Newsletter</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Events</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Help centre</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Tutorials</NavigationMenuLink>
-              <NavigationMenuLink className="py-4 px-6 bg-white text-gray-500 font-medium text-sm">Support</NavigationMenuLink>
+            <NavigationMenuContent className="grid grid-cols-2 grid-rows-3 lg:w-96">
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Blog
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Newsletter
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Events
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Help centre
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Tutorials
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/" className="bg-white px-6 py-4 text-sm font-medium text-gray-500">
+                Support
+              </NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <a href="/">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Pricing
-              </NavigationMenuLink>
-            </a>
+            <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+              Pricing
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

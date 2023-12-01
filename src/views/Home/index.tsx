@@ -160,7 +160,7 @@ export default function Home() {
           <span className="text-2xl font-semibold text-gray-900">Sisyphus</span>
         </div>
         <figure className="flex flex-col gap-8">
-          <blockquote className="text-center text-3xl font-medium leading-[38px] lg:px-8 lg:text-5xl lg:leading-[60px]">
+          <blockquote className="text-center text-3xl font-medium leading-[38px] lg:px-8 lg:text-5xl lg:leading-[60px] 2xl:max-w-7xl">
             We&rsquo;ve been using Untitled to kick start every new project and
             can&rsquo;t imagine working without it.
           </blockquote>

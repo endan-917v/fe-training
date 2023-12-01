@@ -64,7 +64,7 @@ export default function Home() {
             Demo
           </Button>
         </div>
-        <div className="relative mx-4 my-16 lg:h-[480px] lg:overflow-hidden lg:mx-8">
+        <div className="relative mx-4 my-16 lg:mx-8 lg:h-[480px] lg:overflow-hidden">
           <img
             src="/macbook-big.png"
             alt="..."
@@ -195,17 +195,20 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <div className="relative mb-12 max-h-[360px] overflow-hidden">
+        <div className="relative mb-12 max-h-[360px] overflow-hidden lg:mb-24 lg:max-h-[558px]">
           {/* huge images container */}
-          <div className="relative">
+          <img
+            src="/mockup.png"
+            alt="..."
+            className="absolute left-1/2 top-1/2 -z-10 hidden h-[512px] w-[768px] transform -translate-x-72 -translate-y-[278px] lg:block shadow-2xl"
+          />
+          <div className="relative ">
             {/* iphone container */}
-            <div className="absolute left-1/2 top-1/2 -z-10 h-[460px] w-[230px] -translate-x-1/2 -translate-y-1/2 transform  shadow-3xl"></div>
+            <div className="absolute left-1/2 top-1/2 -z-10 h-[460px] w-[230px] shadow-3xl lg:hidden"></div>
             <img
               src="/iphone.png"
               alt="..."
-              className="mx-auto "
-              width={244}
-              height={497}
+              className="mx-auto h-[497px] w-[244px] lg:ml-[215px] lg:mt-16"
             />
           </div>
         </div>

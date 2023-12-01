@@ -11,25 +11,27 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 lg:px-24 lg:py-24">
         <ButtonBadge
           innerBadgeText="New feature"
           mainBadgeText="Check out the team dashboard"
           isIconIncluded
         />
-        <div className="flex flex-col gap-4 py-4">
-          <h1 className="line text-center text-4xl font-semibold leading-[44px] -tracking-[0.72px] text-gray-900">
+        <div className="flex flex-col gap-4 py-4 lg:mb-6">
+          <h1 className="line text-center text-4xl font-semibold leading-[44px] -tracking-[0.72px] text-gray-900 lg:text-6xl lg:leading-[72px]">
             Beautiful analytics to grow smarter
           </h1>
-          <p className="text-center text-lg font-normal leading-7 text-gray-500">
+          <p className="text-center text-lg font-normal leading-7 text-gray-500 lg:mx-auto lg:max-w-3xl">
             Powerful, self-serve product and growth analytics to help you
             convert, engage, and retain more users. Trusted by over 4,000
             startups.
           </p>
         </div>
-        <div className="flex flex-col gap-3 pt-3 lg:flex-row">
-          <Button variant="primary">Sign up</Button>
-          <Button variant="mono">
+        <div className="flex flex-col gap-3 pt-3 lg:flex-row-reverse lg:justify-center">
+          <Button variant="primary" className=" lg:text-lg lg:leading-7">
+            Sign up
+          </Button>
+          <Button variant="mono" className=" lg:text-lg lg:leading-7">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -62,14 +64,18 @@ export default function Home() {
             Demo
           </Button>
         </div>
-        <div className="px-4 py-16">
-          <img src="/macbook-small.png" alt="..."></img>
+        <div className="relative mx-4 my-16 lg:h-[480px] lg:overflow-hidden lg:mx-8">
+          <img
+            src="/macbook-big.png"
+            alt="..."
+            className="h-[183.262px] w-[311.200px] lg:absolute lg:h-auto lg:w-auto"
+          ></img>
         </div>
         <div className="flex flex-col gap-8">
           <p className="text-center text-base font-medium text-gray-500">
             Join 4,000+ companies already growing
           </p>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 lg:max-h-12 lg:grid-cols-5 lg:overflow-hidden">
             <CompanyLogo
               imgUrl="/company-icons/layers.svg"
               name="Layers"
@@ -99,7 +105,7 @@ export default function Home() {
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
       <section className="px-4 py-16 lg:py-24">
-        <div className=" pb-12 lg:pb-16 lg:max-w-3xl lg:mx-auto lg:px-8">
+        <div className=" pb-12 lg:mx-auto lg:max-w-3xl lg:px-8 lg:pb-16">
           {/* features header container */}
           <p className="mb-3 text-center text-sm font-semibold text-primary-700">
             Features
@@ -147,14 +153,14 @@ export default function Home() {
           />
         </ul>
       </section>
-      <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16 lg:py-24 lg:px-16">
+      <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16 lg:px-16 lg:py-24">
         {/* testimonial section */}
         <div className="flex gap-[10px]">
           <img src="/company-icons/sisyphus.svg" alt="..." />
           <span className="text-2xl font-semibold text-gray-900">Sisyphus</span>
         </div>
         <figure className="flex flex-col gap-8">
-          <blockquote className="text-center text-3xl font-medium leading-[38px] lg:text-5xl lg:leading-[60px] lg:px-8">
+          <blockquote className="text-center text-3xl font-medium leading-[38px] lg:px-8 lg:text-5xl lg:leading-[60px]">
             We&rsquo;ve been using Untitled to kick start every new project and
             can&rsquo;t imagine working without it.
           </blockquote>
@@ -322,7 +328,10 @@ export default function Home() {
               to our friendly team.
             </p>
           </div>
-          <Button variant="primary" className="w-[130px]">
+          <Button
+            variant="primary"
+            className="w-[130px] lg:px-[18px] lg:py-[10px]"
+          >
             Get in touch
           </Button>
         </div>
@@ -422,10 +431,10 @@ function FeatureListItem({
     <li className="flex flex-col items-center gap-4 lg:max-w-sm">
       <img src={imgUrl} className="" alt="..."></img>
       <div className="flex flex-col gap-1">
-        <h3 className="text-center text-lg font-medium text-gray-900 leading-[38px] lg:leading-[30px]">
+        <h3 className="text-center text-lg font-medium leading-[38px] text-gray-900 lg:leading-[30px]">
           {title}
         </h3>
-        <p className="text-center text-base text-gray-500 leading-6">{body}</p>
+        <p className="text-center text-base leading-6 text-gray-500">{body}</p>
         {learnMoreUrl && (
           <a
             href={learnMoreUrl}
@@ -444,7 +453,9 @@ function CompanyLogo({ name, imgUrl }: { name: string; imgUrl: string }) {
   return (
     <div className="flex h-[34px] items-center justify-center gap-2">
       <img src={imgUrl} alt="..."></img>
-      <span className="text-lg font-semibold text-gray-900">{name}</span>
+      <span className="text-lg font-semibold text-gray-900 lg:text-2xl">
+        {name}
+      </span>
     </div>
   );
 }

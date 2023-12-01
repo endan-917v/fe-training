@@ -159,7 +159,7 @@ const footerLinks: FooterLinksType = [
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-12 px-4 py-12 lg:gap-16 lg:px-20 lg:py-16">
+    <footer className="flex flex-col gap-12 px-4 py-12 lg:gap-16 lg:px-20 lg:py-16 md:max-lg:px-28">
       <div className="mb-8 grid grid-cols-2 gap-8 lg:grid-cols-6 lg:px-8">
         {footerLinks.map((value, index) => {
           return (

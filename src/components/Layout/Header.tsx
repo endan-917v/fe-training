@@ -12,7 +12,7 @@ import {
 
 export default function Header() {
   return (
-    <header className="flex h-[72px] items-center justify-between px-4 py-5 lg:h-20 lg:px-24 lg:py-6">
+    <header className="flex h-[72px] items-center justify-between px-4 py-5 lg:h-20 lg:px-24 lg:py-6 md:max-lg:px-28">
       <div className="flex gap-10">
         <div className="flex h-8 items-center justify-center gap-[10px]">
           <img src="/logo.png" alt="Purple lens with blurred half"></img>

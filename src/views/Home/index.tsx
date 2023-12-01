@@ -68,7 +68,7 @@ export default function Home() {
           <img
             src="/macbook-big.png"
             alt="..."
-            className="h-[183.262px] w-[311.200px] lg:absolute lg:h-auto lg:w-auto"
+            className="h-[183.262px] w-[311.200px] mx-auto lg:absolute lg:h-auto lg:w-auto"
           ></img>
         </div>
         <div className="flex flex-col gap-8">
@@ -204,7 +204,7 @@ export default function Home() {
           />
           <div className="relative ">
             {/* iphone container */}
-            <div className="absolute left-1/2 top-1/2 -z-10 h-[460px] w-[230px] shadow-3xl lg:hidden"></div>
+            <div className="absolute left-1/2 top-1/2 -z-10 h-[460px] w-[230px] shadow-3xl lg:hidden transform -translate-x-1/2 -translate-y-1/2"></div>
             <img
               src="/iphone.png"
               alt="..."

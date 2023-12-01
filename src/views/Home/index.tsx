@@ -200,7 +200,7 @@ export default function Home() {
           <img
             src="/mockup.png"
             alt="..."
-            className="absolute left-1/2 top-1/2 -z-10 hidden h-[512px] w-[768px] transform -translate-x-72 -translate-y-[278px] lg:block shadow-2xl"
+            className="absolute left-1/2 top-1/2 -z-10 hidden h-[512px] w-[768px] -translate-x-72 -translate-y-[278px] transform shadow-2xl lg:block"
           />
           <div className="relative ">
             {/* iphone container */}

@@ -16,6 +16,9 @@ export default {
           700: "#027A48",
         },
       },
+      screens: {
+        "3xl": "1912px",
+      },
       boxShadow: {
         xs: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
         "3xl":

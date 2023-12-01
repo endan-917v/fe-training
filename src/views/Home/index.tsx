@@ -68,7 +68,7 @@ export default function Home() {
           <img
             src="/macbook-big.png"
             alt="..."
-            className="h-[183.262px] w-[311.200px] mx-auto lg:absolute lg:h-auto lg:w-auto"
+            className="mx-auto h-[183.262px] w-[311.200px] lg:absolute lg:h-auto lg:w-auto"
           ></img>
         </div>
         <div className="flex flex-col gap-8">
@@ -119,7 +119,7 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <ul className="flex flex-row flex-wrap gap-y-10 lg:justify-center lg:gap-8">
+        <ul className="flex flex-row flex-wrap gap-y-10 lg:justify-center lg:gap-8 3xl:max-w-[1440px] 3xl:mx-auto">
           {/* features grid */}
           <FeatureListItem
             imgUrl="/featured-icons/icon1.png"
@@ -200,19 +200,19 @@ export default function Home() {
           <img
             src="/mockup.png"
             alt="..."
-            className="absolute left-1/2 top-1/2 -z-10 hidden h-[512px] w-[768px] -translate-x-72 -translate-y-[278px] transform shadow-2xl lg:block"
+            className="absolute left-1/2 top-1/2 -z-10 hidden h-[512px] w-[768px] xl:-translate-x-72 xl:-translate-y-[278px] lg:-translate-y-[278px] lg:-translate-x-1/2 transform shadow-2xl lg:block"
           />
           <div className="relative ">
             {/* iphone container */}
-            <div className="absolute left-1/2 top-1/2 -z-10 h-[460px] w-[230px] shadow-3xl lg:hidden transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute left-1/2 top-1/2 -z-10 h-[460px] w-[230px] -translate-x-1/2 -translate-y-1/2 transform shadow-3xl lg:hidden"></div>
             <img
               src="/iphone.png"
               alt="..."
-              className="mx-auto h-[497px] w-[244px] lg:ml-[215px] lg:mt-16"
+              className="mx-auto h-[497px] w-[244px] xl:ml-[215px] 3xl:ml-[450px] lg:ml-[0px] lg:mt-16"
             />
           </div>
         </div>
-        <ul className="flex flex-row flex-wrap gap-y-10 lg:flex-nowrap lg:gap-8">
+        <ul className="flex flex-row flex-wrap gap-y-10 lg:flex-nowrap lg:gap-8 3xl:max-w-[1440px] 3xl:justify-center 3xl:mx-auto">
           {/* cutting edge features grid */}
           <FeatureListItem
             imgUrl="/featured-icons/icon1.png"
@@ -340,7 +340,7 @@ export default function Home() {
         </div>
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
-      <section className="px-4 py-16 lg:px-16">
+      <section className="px-4 py-16 lg:px-16 3xl:px-80">
         <div className="mb-12 lg:mb-16 lg:max-w-3xl lg:px-8">
           <p className="mb-3 text-sm font-semibold text-primary-700">
             Launch faster
@@ -408,7 +408,7 @@ function MetricItem({
 }) {
   return (
     <li className="lg:max-w-[264px]">
-      <p className="text-center text-5xl font-semibold leading-[60px] -tracking-[0.96px] text-primary-600 lg:text-6xl lg:leading-[72px]">
+      <p className="text-center text-5xl font-semibold leading-[60px] -tracking-[0.96px] text-primary-600 xl:text-6xl lg:leading-[72px] ">
         {metricText}
       </p>
       <p className="text-center text-lg font-medium leading-7 text-gray-900">

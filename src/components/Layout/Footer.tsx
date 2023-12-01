@@ -74,10 +74,10 @@ const footerLinks: FooterLinksType = [
         label: "Help centre",
       },
       {
-        label: "Blog",
+        label: "Tutorials",
       },
       {
-        label: "Blog",
+        label: "Support",
       },
     ],
   },

@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="flex h-[72px] px-4 py-5 lg:h-20 justify-between items-center">
+    <header className="flex h-[72px] px-4 py-5 lg:h-20 justify-between items-center lg:px-24 lg:py-6">
       <div className="flex h-8 items-center justify-center gap-[10px]">
         <img src="/logo.png" alt="Purple lens with blurred half"></img>
         <span className="text-xl font-medium">Untitled UI</span>

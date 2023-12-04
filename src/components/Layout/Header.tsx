@@ -15,6 +15,86 @@ import {
   SheetTrigger,
 } from "../Common/Sheet";
 
+type NavLinkChildType = {
+  url: string;
+  label: string;
+};
+
+type NavLinkParentType = {
+  title: string;
+  url?: string;
+  children?: NavLinkChildType[];
+};
+
+const headerLinks: NavLinkParentType[] = [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "Products",
+    children: [
+      {
+        label: "Spark",
+        url: "/",
+      },
+      {
+        label: "Inbox",
+        url: "/",
+      },
+      {
+        label: "Insight",
+        url: "/",
+      },
+      {
+        label: "Resolve",
+        url: "/",
+      },
+      {
+        label: "Connect",
+        url: "/",
+      },
+      {
+        label: "Integrate",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    children: [
+      {
+        label: "Blog",
+        url: "/",
+      },
+      {
+        label: "Newsletter",
+        url: "/",
+      },
+      {
+        label: "Events",
+        url: "/",
+      },
+      {
+        label: "Event centre",
+        url: "/",
+      },
+      {
+        label: "Tutorials",
+        url: "/",
+      },
+      {
+        label: "Support",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Pricing",
+    url: "/",
+  },
+];
+
 export default function Header() {
   return (
     <header className="flex h-[72px] items-center justify-between px-4 py-5 md:max-lg:px-28 lg:h-20 lg:px-24 lg:py-6">
@@ -42,107 +122,74 @@ export const HeaderNavMenu = ({ className }: { className?: string }) => {
       {/* nav for both desktop and mobile controlled by media queries */}
       <NavigationMenu>
         <NavigationMenuList className="flex-col items-baseline lg:flex-row lg:items-center">
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/"
-              className={navigationMenuTriggerStyle()}
-            >
-              Home
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-            <NavigationMenuContent className="grid w-[300px] grid-cols-2 grid-rows-3 md:max-lg:w-80 lg:w-96">
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Spark
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Inbox
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Insight
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Resolve
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Connect
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Integrate
-              </NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-            <NavigationMenuContent className="grid w-[300px] grid-cols-2 grid-rows-3 md:max-lg:w-80 lg:w-96">
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Blog
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Newsletter
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Events
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Help centre
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Tutorials
-              </NavigationMenuLink>
-              <NavigationMenuLink
-                href="/"
-                className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
-              >
-                Support
-              </NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/"
-              className={navigationMenuTriggerStyle()}
-            >
-              Pricing
-            </NavigationMenuLink>
-          </NavigationMenuItem>
+          {headerLinks.map((value, index) => {
+            if (!value.children && value.url) {
+              // if no children and has url, display solo
+              return (
+                <NavMenuItemSolo
+                  title={value.title}
+                  url={value.url}
+                  key={index}
+                />
+              );
+            }
+
+            if (value.children) {
+              return (
+                <NavMenuItemExtended
+                  title={value.title}
+                  key={index}
+                  children={value.children}
+                />
+              );
+            }
+          })}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
+  );
+};
+
+export const NavMenuItemSolo = ({
+  title,
+  url,
+}: {
+  title: string;
+  url: string;
+}) => {
+  return (
+    <NavigationMenuItem>
+      <NavigationMenuLink href={url} className={navigationMenuTriggerStyle()}>
+        {title}
+      </NavigationMenuLink>
+    </NavigationMenuItem>
+  );
+};
+
+export const NavMenuItemExtended = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: NavLinkChildType[];
+}) => {
+  return (
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
+      <NavigationMenuContent className="grid w-[300px] grid-cols-2 grid-rows-3 md:max-lg:w-80 lg:w-96">
+        {children.map((value, index) => {
+          return (
+            <NavigationMenuLink
+              key={index}
+              href={value.url}
+              className="bg-white px-6 py-4 text-sm font-medium text-gray-500"
+            >
+              {value.label}
+            </NavigationMenuLink>
+          );
+        })}
+      </NavigationMenuContent>
+    </NavigationMenuItem>
   );
 };
 

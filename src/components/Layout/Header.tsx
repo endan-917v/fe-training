@@ -151,7 +151,7 @@ export const HeaderNavMenu = ({ className }: { className?: string }) => {
 export const MobileHeaderNavMenu = () => {
   return (
     <Sheet>
-      <SheetTrigger className="block lg:hidden">
+      <SheetTrigger className="block lg:hidden" title="Hamburger Menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

@@ -11,7 +11,7 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="px-4 py-16 lg:px-24 lg:py-24 md:max-lg:px-28">
+      <section className="px-4 py-16 md:max-lg:px-28 lg:px-24 lg:py-24">
         <ButtonBadge
           innerBadgeText="New feature"
           mainBadgeText="Check out the team dashboard"
@@ -71,7 +71,7 @@ export default function Home() {
             className="mx-auto h-[183.262px] w-[311.200px] lg:absolute lg:h-auto lg:w-auto"
           ></img>
         </div>
-        <div className="flex flex-col gap-8 3xl:max-w-7xl 3xl:mx-auto">
+        <div className="flex flex-col gap-8 3xl:mx-auto 3xl:max-w-7xl">
           <p className="text-center text-base font-medium text-gray-500">
             Join 4,000+ companies already growing
           </p>
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
-      <section className="px-4 py-16 lg:py-24 md:max-lg:px-28">
+      <section className="px-4 py-16 md:max-lg:px-28 lg:py-24">
         <div className=" pb-12 lg:mx-auto lg:max-w-3xl lg:px-8 lg:pb-16">
           {/* features header container */}
           <p className="mb-3 text-center text-sm font-semibold text-primary-700">
@@ -119,7 +119,7 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <ul className="3xl:max-w-[1440px] 3xl:mx-auto flex flex-row flex-wrap gap-y-10 lg:justify-center lg:gap-8">
+        <ul className="flex flex-row flex-wrap gap-y-10 lg:justify-center lg:gap-8 3xl:mx-auto 3xl:max-w-[1440px]">
           {/* features grid */}
           <FeatureListItem
             imgUrl="/featured-icons/icon1.png"
@@ -153,7 +153,7 @@ export default function Home() {
           />
         </ul>
       </section>
-      <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16 lg:px-16 lg:py-24 md:max-lg:px-28">
+      <section className="flex flex-col items-center gap-8 bg-gray-50 px-4 py-16 md:max-lg:px-28 lg:px-16 lg:py-24">
         {/* testimonial section */}
         <div className="flex gap-[10px]">
           <img src="/company-icons/sisyphus.svg" alt="..." />
@@ -182,7 +182,7 @@ export default function Home() {
           </figcaption>
         </figure>
       </section>
-      <section className="px-4 py-16 lg:px-24 lg:py-24 md:max-lg:px-28">
+      <section className="px-4 py-16 md:max-lg:px-28 lg:px-24 lg:py-24">
         {/* features section */}
         <div className="lg:mx-auto lg:max-w-3xl">
           <ButtonBadge mainBadgeText="Features" className="mb-4 text-sm" />
@@ -195,7 +195,7 @@ export default function Home() {
             startups.
           </p>
         </div>
-        <div className="relative mb-12 max-h-[360px] overflow-hidden lg:mb-24 lg:max-h-[558px]">
+        <div className="relative mb-12 max-h-[310px] overflow-hidden lg:mb-24 lg:max-h-[558px]">
           {/* huge images container */}
           <img
             src="/mockup.png"
@@ -208,11 +208,11 @@ export default function Home() {
             <img
               src="/iphone.png"
               alt="..."
-              className="3xl:ml-[450px] mx-auto h-[497px] w-[244px] lg:ml-[0px] lg:mt-16 xl:ml-[215px]"
+              className="mx-auto h-[497px] w-[244px] lg:ml-[0px] lg:mt-16 xl:ml-[215px] 3xl:ml-[450px]"
             />
           </div>
         </div>
-        <ul className="3xl:max-w-[1440px] 3xl:justify-center 3xl:mx-auto flex flex-row flex-wrap gap-y-10 lg:flex-nowrap lg:gap-8">
+        <ul className="flex flex-row flex-wrap gap-y-10 lg:flex-nowrap lg:gap-8 3xl:mx-auto 3xl:max-w-[1440px] 3xl:justify-center">
           {/* cutting edge features grid */}
           <FeatureListItem
             imgUrl="/featured-icons/icon1.png"
@@ -340,7 +340,7 @@ export default function Home() {
         </div>
       </section>
       <div className="mx-4 border-t border-t-gray-200"></div>
-      <section className="3xl:px-80 px-4 py-16 lg:px-16 md:max-lg:px-28">
+      <section className="px-4 py-16 md:max-lg:px-28 lg:px-16 3xl:px-80">
         <div className="mb-12 lg:mb-16 lg:max-w-3xl lg:px-8">
           <p className="mb-3 text-sm font-semibold text-primary-700">
             Launch faster
@@ -381,7 +381,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 px-4 py-16 lg:py-24 md:max-lg:px-28">
+      <section className="bg-gray-50 px-4 py-16 md:max-lg:px-28 lg:py-24">
         <h2 className="mb-4 text-center text-3xl font-semibold leading-[38px] text-gray-900">
           Start your free trial
         </h2>

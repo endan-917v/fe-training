@@ -104,7 +104,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="mx-4 border-t border-t-gray-200"></div>
+      <div className="mx-4 border-t border-t-gray-200 lg:mx-24"></div>
       <section className="px-4 py-16 md:max-lg:px-28 lg:py-24">
         <div className=" pb-12 lg:mx-auto lg:max-w-3xl lg:px-8 lg:pb-16">
           {/* features header container */}
@@ -161,7 +161,7 @@ export default function Home() {
           <span className="text-2xl font-semibold text-gray-900">Sisyphus</span>
         </div>
         <figure className="flex flex-col gap-8">
-          <blockquote className="text-center text-3xl font-medium leading-[38px] lg:px-8 lg:text-5xl lg:leading-[60px] 2xl:max-w-7xl">
+          <blockquote className="text-center text-3xl font-medium leading-[38px] text-gray-900 lg:px-8 lg:text-5xl lg:leading-[60px] 2xl:max-w-7xl">
             We&rsquo;ve been using Untitled to kick start every new project and
             can&rsquo;t imagine working without it.
           </blockquote>
@@ -340,7 +340,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <div className="mx-4 border-t border-t-gray-200"></div>
+      <div className="mx-4 border-t border-t-gray-200 lg:mx-24"></div>
       <section className="px-4 py-16 md:max-lg:px-28 lg:px-16 3xl:px-80">
         <div className="mb-12 lg:mb-16 lg:max-w-3xl lg:px-8">
           <p className="mb-3 text-sm font-semibold text-primary-700">
@@ -377,8 +377,12 @@ export default function Home() {
               metricBody="We&rsquo;re proud of our 5-star rating with over 200 reviews."
             ></MetricItem>
           </ul>
-          <div>
-            <img src="/something-great.png" alt="..." />
+          <div className="relative h-60 overflow-hidden md:max-lg:h-[480px] lg:h-auto lg:overflow-auto">
+            <img
+              src="/something-great.png"
+              alt="..."
+              className="absolute left-0 top-0 h-full w-full object-cover lg:relative lg:left-auto lg:top-auto"
+            />
           </div>
         </div>
       </section>

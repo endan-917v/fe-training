@@ -101,7 +101,9 @@ export default function Header() {
       <div className="flex gap-10">
         <div className="flex h-8 items-center justify-center gap-[10px]">
           <img src="/logo.png" alt="Purple lens with blurred half"></img>
-          <span className="text-xl font-medium">Untitled UI</span>
+          <span className="text-xl font-semibold text-gray-900">
+            Untitled UI
+          </span>
         </div>
         {/* desktop nav */}
         <HeaderNavMenu className="hidden lg:block" />

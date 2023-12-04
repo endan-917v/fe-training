@@ -159,7 +159,7 @@ const footerLinks: FooterLinksType = [
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-12 px-4 py-12 lg:gap-16 lg:px-20 lg:py-16 md:max-lg:px-28">
+    <footer className="flex flex-col gap-12 px-4 py-12 md:max-lg:px-28 lg:gap-8 lg:px-20 lg:py-16">
       <div className="mb-8 grid grid-cols-2 gap-8 lg:grid-cols-6 lg:px-8">
         {footerLinks.map((value, index) => {
           return (
@@ -172,11 +172,13 @@ export default function Footer() {
           );
         })}
       </div>
-      <div className="border-t border-t-gray-200"></div>
-      <div className="flex flex-col gap-6 lg:px-8 lg:flex-row lg:justify-between">
+      <div className="border-t border-t-gray-200 lg:mx-8"></div>
+      <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:px-8">
         <div className="flex items-center gap-[10px]">
           <img src="/logo.png" alt="Purple lens with blurred half"></img>
-          <span className="text-xl font-medium">Untitled UI</span>
+          <span className="text-xl font-semibold text-gray-900">
+            Untitled UI
+          </span>
         </div>
         <p className="text-base text-gray-400">
           © 2077 Untitled UI. All rights reserved.
@@ -198,7 +200,7 @@ function FooterLinksList({ links }: { links: FooterLinksItem[] }) {
             >
               {value.label}
               {value.isNew && (
-                <button className="bg-success-50 text-success-700 rounded-2xl px-2 py-[2px] text-xs font-medium">
+                <button className="rounded-2xl bg-success-50 px-2 py-[2px] text-xs font-medium text-success-700">
                   New
                 </button>
               )}

@@ -108,7 +108,7 @@ export default function Header() {
       </div>
       {/* mobile nav header */}
       <MobileHeaderNavMenu />
-      <button className="hidden lg:block">
+      <button className="hidden lg:block" type="button">
         {/* user profile picture button */}
         <img src="/faq-avatars/Avatar-2.png" alt="..." className="h-10 w-10" />
       </button>
@@ -196,7 +196,11 @@ export const NavMenuItemExtended = ({
 export const MobileHeaderNavMenu = () => {
   return (
     <Sheet>
-      <SheetTrigger className="block lg:hidden" title="Hamburger Menu">
+      <SheetTrigger
+        className="block lg:hidden"
+        title="Hamburger Menu"
+        type="button"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

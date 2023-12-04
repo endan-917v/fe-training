@@ -481,7 +481,7 @@ function ButtonBadge({
   const mainClasses = cn(defaultClasses, className);
 
   return (
-    <button className={mainClasses}>
+    <button className={mainClasses} type="button">
       {innerBadgeText && (
         <span className="mr-2 rounded-2xl bg-white px-2 py-[2px] lg:mr-3">
           {innerBadgeText}

@@ -1,21 +1,17 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  // NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  // NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "../Common/NavigationMenu";
 
 import {
   Sheet,
   SheetContent,
-  // SheetDescription,
   SheetHeader,
-  // SheetTitle,
   SheetTrigger,
 } from "../Common/Sheet";
 
@@ -27,6 +23,7 @@ export default function Header() {
           <img src="/logo.png" alt="Purple lens with blurred half"></img>
           <span className="text-xl font-medium">Untitled UI</span>
         </div>
+        {/* desktop nav */}
         <HeaderNavMenu className="hidden lg:block" />
       </div>
       {/* mobile nav header */}
@@ -42,6 +39,7 @@ export default function Header() {
 export const HeaderNavMenu = ({ className }: { className?: string }) => {
   return (
     <div className={className}>
+      {/* nav for both desktop and mobile controlled by media queries */}
       <NavigationMenu>
         <NavigationMenuList className="flex-col items-baseline lg:flex-row lg:items-center">
           <NavigationMenuItem>

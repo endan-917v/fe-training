@@ -167,7 +167,7 @@ export default function Footer() {
               <p className="text-sm font-semibold text-gray-400">
                 {value.title}
               </p>
-              <FooterActualLinks links={value.links}></FooterActualLinks>
+              <FooterLinksList links={value.links}></FooterLinksList>
             </nav>
           );
         })}
@@ -186,7 +186,7 @@ export default function Footer() {
   );
 }
 
-function FooterActualLinks({ links }: { links: FooterLinksItem[] }) {
+function FooterLinksList({ links }: { links: FooterLinksItem[] }) {
   return (
     <ul className="grid grid-cols-1 gap-3">
       {links.map((value, index: number) => {
